@@ -355,12 +355,7 @@ export async function loadBlock(block) {
       const decorationComplete = new Promise((resolve) => {
         (async () => {
           try {
-            let mod;
-            if ( blockName === 'columns' ) {
-               mod = await import(`https://cdn.jsdelivr.net/gh/neerajgrg/MyHelixProject/blocks/${blockName}/${blockName}.js`);
-            } else { 
-               mod = await import(`../blocks/${blockName}/${blockName}.js`);
-            }
+            const mod = await import(`../blocks/${blockName}/${blockName}.js`);
             if (mod.default) {
               await mod.default(block);
             }
