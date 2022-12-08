@@ -345,7 +345,7 @@ export function buildBlock(blockName, content) {
  * Utility Function to check if the file exist or not
  */
 
- function existsFile(url) {
+ function existsFile1(url) {
   var http = new XMLHttpRequest();
   http.open('HEAD', url, false);
   http.send();
@@ -358,13 +358,16 @@ export function buildBlock(blockName, content) {
  * @param {Element} block The block element
  */
 export async function loadBlock(block) {
+
+  const { default: blocks } = await import('../blocks/list.js');
+
   const status = block.getAttribute('data-block-status');
   if (status !== 'loading' && status !== 'loaded') {
     block.setAttribute('data-block-status', 'loading');
     const blockName = block.getAttribute('data-block-name');
     try {
       const cssLoaded = new Promise((resolve) => {
-        if ( blockName == 'columns' ) { 
+        if ( ! blocks.includes(blockName) ) { 
           loadCSS(`https://cdn.jsdelivr.net/gh/neerajgrg/MyHelixProject/blocks/${blockName}/${blockName}.css`, resolve);
         } else {
           loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`, resolve);
@@ -374,7 +377,7 @@ export async function loadBlock(block) {
         (async () => {
           try {
             let mod;
-            if ( blockName == 'columns' ) { 
+            if ( ! blocks.includes(blockName) ) { 
                mod = await import(`https://cdn.jsdelivr.net/gh/neerajgrg/MyHelixProject/blocks/${blockName}/${blockName}.js`);
             } else { 
                mod = await import(`../blocks/${blockName}/${blockName}.js`);
