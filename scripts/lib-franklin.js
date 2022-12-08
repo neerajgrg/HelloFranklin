@@ -350,7 +350,11 @@ export async function loadBlock(block) {
     const blockName = block.getAttribute('data-block-name');
     try {
       const cssLoaded = new Promise((resolve) => {
-        loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`, resolve);
+        if ( blockName === 'columns' ) { 
+          loadCSS(`https://cdn.jsdelivr.net/gh/neerajgrg/MyHelixProject/blocks/${blockName}/${blockName}.css`, resolve);
+        } else {
+          loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`, resolve);
+        } 
       });
       const decorationComplete = new Promise((resolve) => {
         (async () => {
