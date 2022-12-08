@@ -364,7 +364,7 @@ export async function loadBlock(block) {
     const blockName = block.getAttribute('data-block-name');
     try {
       const cssLoaded = new Promise((resolve) => {
-        if ( ! existsFile(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`) ) { 
+        if ( blockName == 'columns' ) { 
           loadCSS(`https://cdn.jsdelivr.net/gh/neerajgrg/MyHelixProject/blocks/${blockName}/${blockName}.css`, resolve);
         } else {
           loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`, resolve);
@@ -374,7 +374,7 @@ export async function loadBlock(block) {
         (async () => {
           try {
             let mod;
-            if ( ! existsFile (`../blocks/${blockName}/${blockName}.js`) ) {
+            if ( blockName == 'columns' ) { 
                mod = await import(`https://cdn.jsdelivr.net/gh/neerajgrg/MyHelixProject/blocks/${blockName}/${blockName}.js`);
             } else { 
                mod = await import(`../blocks/${blockName}/${blockName}.js`);
