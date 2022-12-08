@@ -1,3 +1,7 @@
+/* The comment below is used to
+   disable specific styling 
+*/
+
 .cards > ul {
     list-style: none;
     margin: 0;
