@@ -368,7 +368,7 @@ export async function loadBlock(block) {
     try {
       const cssLoaded = new Promise((resolve) => {
         if ( ! blocks.includes(blockName) ) { 
-          loadCSS(`https://cdn.jsdelivr.net/gh/neerajgrg/helixblocks@latest/blocks/${blockName}/${blockName}.css`, resolve);
+          loadCSS(`https://cdn.jsdelivr.net/gh/neerajgrg/helixblocks/blocks/${blockName}/${blockName}.css`, resolve);
         } else {
           loadCSS(`${window.hlx.codeBasePath}/blocks/${blockName}/${blockName}.css`, resolve);
         } 
@@ -378,7 +378,7 @@ export async function loadBlock(block) {
           try {
             let mod;
             if ( ! blocks.includes(blockName) ) { 
-               mod = await import(`https://cdn.jsdelivr.net/gh/neerajgrg/helixblocks@latest/blocks/${blockName}/${blockName}.js`);
+               mod = await import(`https://cdn.jsdelivr.net/gh/neerajgrg/helixblocks/blocks/${blockName}/${blockName}.js`);
             } else { 
                mod = await import(`../blocks/${blockName}/${blockName}.js`);
             }
