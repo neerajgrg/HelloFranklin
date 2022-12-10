@@ -1,0 +1,22 @@
+[
+    {
+      "name": "cards",
+       "preview": true,
+       "doc-table": true
+    },
+    {
+      "name": "footer",
+      "preview": true,
+      "doc-table": true
+    },
+    {
+      "name": "header",
+      "preview": true,
+      "doc-table": true
+    },
+    {
+      "name": "hero",
+      "preview": true,
+      "doc-table": true
+    }
+]
