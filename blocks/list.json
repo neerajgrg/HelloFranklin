@@ -2,21 +2,21 @@
     {
       "name": "cards",
        "preview": true,
-       "doc-table": true
+       "docTable": true
     },
     {
       "name": "footer",
       "preview": true,
-      "doc-table": true
+      "docTable": true
     },
     {
       "name": "header",
       "preview": true,
-      "doc-table": true
+      "docTable": true
     },
     {
       "name": "hero",
       "preview": true,
-      "doc-table": true
+      "docTable": true
     }
 ]
