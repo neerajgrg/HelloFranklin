@@ -2,21 +2,30 @@
     {
       "name": "cards",
        "preview": true,
-       "docTable": true
+       "docTable": true,
+       "reference": "https://www.hlx.live/developer/block-collection/cards",
+       "icon": "https://img.icons8.com/windows/512/bank-cards.png"
+       
     },
     {
       "name": "footer",
       "preview": true,
-      "docTable": true
+      "docTable": true,
+      "reference": "https://www.hlx.live/developer/block-collection/footer",
+      "icon": "https://img.icons8.com/ios/512/document-footer.png"
     },
     {
       "name": "header",
       "preview": true,
-      "docTable": true
+      "docTable": true,
+      "reference": "https://www.hlx.live/developer/block-collection/header",
+      "icon": "https://img.icons8.com/ios/512/document-header.png"
     },
     {
       "name": "hero",
       "preview": true,
-      "docTable": true
+      "docTable": true,
+      "reference": "https://www.hlx.live/developer/block-collection/hero",
+      "icon": "https://img.icons8.com/ios/512/rectangle-stroked.png"
     }
 ]
