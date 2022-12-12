@@ -7,11 +7,11 @@ header .header {
   padding: 0 2rem;
   position: fixed;
   z-index: 2;
-  background-color: var(--dark-background-color);
+  background-color:  rgb(10 17 37);;
   width: 100vw;
-  height: var(--nav-height);
+  height: 41px;
   box-sizing: border-box;
-  font-family: var(--body-font-family);
+  font-family: roboto, roboto-fallback, sans-serif;;
 }
 
 header .header nav {
