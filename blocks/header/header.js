@@ -10,8 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import {  readBlockConfig } from '../../scripts/scripts.js';
-import { decorateIcons } from '../../scripts/lib-franklin.js';
+import { decorateIcons, readBlockConfig } from '../../scripts/lib-franklin.js';
 
 /**
  * decorates the header, mainly the nav
