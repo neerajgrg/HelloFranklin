@@ -2,8 +2,8 @@
   position: relative;
   z-index: 1;
   min-height: 20rem;
-  color: var(--text-color-invert);
-  background-color: var(--highlight-background-color);
+  color: #fff;
+  background-color: rgb(236 16 0);
 }
 
 @media (min-width: 900px) {
