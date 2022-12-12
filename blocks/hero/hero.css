@@ -1,40 +1,30 @@
-/* block specific CSS goes here */
-
-main .hero-container > div {
-    max-width: unset;
-}
-  
-main .hero-container {
-    padding: 0;
-}
-  
-main .hero {
-    position: relative;
-    padding: 32px;
-    min-height: 300px;
+.hero-container {
+  position: relative;
+  z-index: 1;
+  min-height: 20rem;
+  color: var(--text-color-invert);
+  background-color: var(--highlight-background-color);
 }
 
-main .hero h1 {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #4933FF;
+@media (min-width: 900px) {
+  .hero-container {
+      min-height: 30rem;
+  }
 }
 
-
-main .hero picture {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    object-fit: cover;
-    box-sizing: border-box;
+.hero picture {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
 }
 
-main .hero img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.hero img {
+  object-position: 100% 80%;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
